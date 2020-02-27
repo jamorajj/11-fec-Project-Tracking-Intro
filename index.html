@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blade-right"></div>
+
+    <div class="mobile-nav mobile-only">
+      <figure class="logo">
+        <img src="images/logo.svg" alt="" />
+      </figure>
+
+      <div id="btn-burger" class="burger mobile-only">
+        <img id="img-burger" src="images/icon-hamburger.svg" alt="" />
+      </div>
+    </div>
+    <div id="mobnav" class="mobile-nav-body mobile-only">
+      <ul class="nav-links barlow-condensed bold">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="wrapper">
+        <nav class="desktop-only">
+          <div class="logo">
+            <img src="images/logo.svg" alt="" />
+          </div>
+
+          <ul class="nav-links barlow-condensed bold ">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+
+        <div class="hero">
+          <div class="hero-left">
+            <div class="header barlow-condensed">
+              <span class="barlow-condensed">&nbsp;&nbsp;New&nbsp;&nbsp;</span>
+              Monograph Dashboard
+            </div>
+
+            <div class="headline barlow-condensed bold">
+              Powerful insights into your team
+            </div>
+            <div class="copy barlow">
+              Project planning and time tracking for agile teams
+            </div>
+
+            <div class="bottom">
+              <button class="schedule barlow-condensed">
+                Schedule a demo
+              </button>
+              <span class="preview barlow">
+                to see a preview
+              </span>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img src="images/illustration-devices.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-right">
+      <img src="images/illustration-devices.svg" alt="" />
+    </div>
+    <script>
+      let burgerBtn = document.getElementById("btn-burger");
+      let burgerImg = document.getElementById("img-burger");
+      let mobileNav = document.getElementById("mobnav");
+
+      let status = false; // false is close
+
+      burgerBtn.addEventListener("click", () => {
+        status = !status;
+        if (status) {
+          burgerImg.src = "images/icon-close.svg";
+          mobileNav.style.display = "block";
+        } else {
+          burgerImg.src = "images/icon-hamburger.svg";
+          mobileNav.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
