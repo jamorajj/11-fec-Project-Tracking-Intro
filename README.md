@@ -2,7 +2,7 @@
 
 Frontend Challenge - Project Tracking Intro
 
-Solution for Project Tracking Intro challenge.
+Solution for Project Tracking Intro challenge..
 
 # Frontend Mentor - Project Tracking Intro
 
